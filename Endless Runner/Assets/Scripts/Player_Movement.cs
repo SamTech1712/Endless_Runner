@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     public float jumpForce;
+    public float gravity;
     
     public Rigidbody2D rb2D;
 
@@ -13,7 +14,8 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         rb2D = transform.GetComponent <Rigidbody2D>();
-        jumpForce = 20f;
+        jumpForce = 25f;
+        gravity = 5f;
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class Player_Movement : MonoBehaviour
         {
             rb2D.AddForce(Vector3.up * jumpForce * 20f);
         }
+        rb2D.gravityScale = gravity;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
