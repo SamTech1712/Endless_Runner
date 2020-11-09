@@ -156,6 +156,8 @@ MonoBehaviour:
   jumpForce: 10
   gravity: 1
   speed: 6
+  velocity: 0
+  airMovementSlowness: 0.25
   rb2D: {fileID: 133274771}
   isGrounded: 0
 --- !u!50 &133274771
@@ -238,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 133274769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 700785181}
   m_Father: {fileID: 0}

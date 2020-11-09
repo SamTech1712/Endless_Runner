@@ -7,6 +7,9 @@ public class Player_Movement : MonoBehaviour
     public float jumpForce;
     public float gravity;
     public float speed = 1;
+    public float velocity = 0;
+    public float airMovementSlowness;
+    
     
     public Rigidbody2D rb2D;
 
@@ -23,22 +26,57 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        rb2D.gravityScale = gravity;
+
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
 
             rb2D.AddForce(new Vector2(0, 1) * jumpForce * 20f, ForceMode2D.Force);
 
         }
-        rb2D.gravityScale = gravity;
 
-        if (Input.GetKey(KeyCode.D))
+        if (isGrounded)
         {
-            MapCreator.instance.Move(-speed * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.A))
-        {
-            MapCreator.instance.Move(speed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.D))
+            {
+                velocity = -speed;
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                velocity = speed;
+            }
+            else
+            {
+                velocity = 0;
+            }
+
+        }else{
+            if (Input.GetKey(KeyCode.D))
+            {
+                if(velocity > -speed)
+                {
+                    velocity -= airMovementSlowness;
+                }
+                else
+                {
+                    velocity = -speed;
+                }
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                if(velocity < speed)
+                {
+                    velocity += airMovementSlowness;
+                }
+                else
+                {
+                    velocity = speed;
+                }
+            }
         }
+       
+       
+        MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
