@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Here all the prefabs and objectPool - sizes for a object is stored for each biome.
 [CreateAssetMenu(fileName = "Biome", menuName = "ScriptableObjects/Biome", order = 1)]
 public class Biome : ScriptableObject
 {

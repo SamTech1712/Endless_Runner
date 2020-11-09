@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Adds functionality to the proceduralElement script making it a obstacle.
+//this is how all special procedural elements should be written.
 public class Obstacle : ProceduralElement
 {
     public Obstacle(string _tag)

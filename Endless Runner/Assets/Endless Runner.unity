@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 1190047124}
   - component: {fileID: 1190047123}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Procedural Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   spawnX: 50
   maxY: 50
   minY: -50
+  playerStartPosition: {x: -4, y: 0}
   segmentLenght: 10
   difficulty: 5
 --- !u!114 &1190047124
