@@ -67,7 +67,7 @@ public class Player_Movement : MonoBehaviour
                 if(velocity < speed)
                 {
                     velocity += airMovementSlowness;
-                }
+                } 
                 else
                 {
                     velocity = speed;
