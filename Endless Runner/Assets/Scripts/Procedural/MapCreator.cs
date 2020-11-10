@@ -13,8 +13,8 @@ public class MapCreator : MonoBehaviour
     Biome currentBiome;
     int segmentsLeftOfBiome;
 
-    public float despawnX;         //the X coordinate where segments will spawn
-    public float spawnX;           //the X coordinate where segments will despawn
+    public float despawnX;         //the X coordinate where segments will despawn
+    public float spawnX;           //the X coordinate where segments will spawn
     public float maxY;             //the highest the platform can be
     public float minY;             //the lowest the platform can be
     public float segmentLenght;
