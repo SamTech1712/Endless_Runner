@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+
+    public float gravity=1;
+    public float GravityTime=1;
+    public float gravityScale=0.1f;
     public float jumpForce;
     public float speed = 1;
     public float velocity = 0;
@@ -16,13 +20,14 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
-        rb2D = transform.GetComponent <Rigidbody2D>();
+        rb2D = transform.GetComponent<Rigidbody2D>();
+ 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        changeGravity();
         #region Movement_Code
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
@@ -71,9 +76,11 @@ public class Player_Movement : MonoBehaviour
             }
         }
         #endregion
+        rb2D.gravityScale = gravity;
         MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
+    #region Check if Grounded
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.tag == "ground")
@@ -87,5 +94,14 @@ public class Player_Movement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    #endregion 
+
+    IEnumerator changeGravity()
+    {
+        yield return new WaitForSeconds(GravityTime);
+        gravity += gravityScale;
+        yield return null;
+        
     }
 }
