@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     public float jumpForce;
-    public float gravity;
     public float speed = 1;
     public float velocity = 0;
     public float airMovementSlowness;
@@ -18,16 +17,13 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         rb2D = transform.GetComponent <Rigidbody2D>();
-        //don't have to do this because it can easily be set and changed in the inspector
-        //jumpForce = 25f;
-        //gravity = 5f;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb2D.gravityScale = gravity;
 
+        #region Movement_Code
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
 
@@ -74,8 +70,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
-       
-       
+        #endregion
         MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
