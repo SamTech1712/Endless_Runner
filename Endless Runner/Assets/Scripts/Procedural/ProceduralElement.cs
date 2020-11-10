@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//the parent class to all elements that should be placed proceduraly.
 public class ProceduralElement
 {
     

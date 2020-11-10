@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Stores all the procedural elements in one segment of the map.
+//Will also call Spawn, Delete and Move functions on all of its elements.
 public class Segment
 {
     public List<ProceduralElement> elements;

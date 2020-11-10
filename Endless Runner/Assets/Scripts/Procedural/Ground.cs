@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Another procedural element. This one is not different because the ground or platform should take the position of other
+// platforms into account when it is beeing placed. That's why it doesn't have the calculateAndSpawn function.
 public class Ground : ProceduralElement
 {
     public float height
