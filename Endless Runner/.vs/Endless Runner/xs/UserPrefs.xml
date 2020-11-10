@@ -1,24 +1,19 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraFollowPlayer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BottomCollisionDetection.cs">
     <Files>
-      <File FileName="Assets/Procedural/MapCreator.cs" Line="92" Column="52" />
-      <File FileName="Assets/Procedural/ProceduralElement.cs" Line="5" Column="70" />
-      <File FileName="Assets/Procedural/Obstacle.cs" Line="6" Column="65" />
-      <File FileName="Assets/Procedural/Segment.cs" Line="6" Column="26" />
-      <File FileName="Assets/Procedural/Ground.cs" Line="8" Column="2" />
-      <File FileName="Assets/Procedural/DefaultBiomeNames.cs" Line="7" Column="82" />
-      <File FileName="Assets/Procedural/Biome.cs" Line="5" Column="85" />
-      <File FileName="Assets/Scripts/Player_Movement.cs" Line="13" Column="11" />
-      <File FileName="Assets/Scripts/CameraFollowPlayer.cs" Line="7" Column="7" />
+      <File FileName="Assets/Scripts/Player_Movement.cs" Line="86" Column="26" />
+      <File FileName="Assets/Scripts/Procedural/Biome.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SideCollisionDetection.cs" Line="8" Column="44" />
+      <File FileName="Assets/Scripts/BottomCollisionDetection.cs" Line="7" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Endless Runner" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Procedural" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="CameraFollowPlayer.cs" selected="True" />
+                <Node name="Procedural" expanded="True" />
+                <Node name="BottomCollisionDetection.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -28,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ea6f9cc4-e31f-4123-b241-a148676df0eb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7279beb4-ffb4-466e-a0be-8622d0d09af4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

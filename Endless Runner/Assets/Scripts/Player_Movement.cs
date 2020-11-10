@@ -17,6 +17,8 @@ public class Player_Movement : MonoBehaviour
     public Rigidbody2D rb2D;
 
     public bool isGrounded;
+    public bool isBlockedRight;
+    public bool isBlockedLeft;
 
     void Start()
     {
@@ -75,28 +77,21 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+
+        if(isBlockedRight && velocity < 0)
+        {
+            velocity = 0;
+        }else if(isBlockedLeft && velocity > 0)
+        {
+            velocity = 0;
+        }
+
         #endregion
         rb2D.gravityScale = gravity;
         MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
-    #region Check if Grounded
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.tag == "ground")
-        {
-            isGrounded = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "ground")
-        {
-            isGrounded = false;
-        }
-    }
-    #endregion 
-
+    
     IEnumerator changeGravity()
     {
         yield return new WaitForSeconds(GravityTime);
