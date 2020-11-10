@@ -5,9 +5,9 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
 
-    // for å spawne kan en gjøre dette: ObjectPooler.Instance.SpawnFromPool("tag", position, rotation)
-    // hvis du vil legge til slik at start blir calla hver gang den blir laget kan en lage en interface.
-    // bare se videoen til Brackeys
+    // to spawn one can do this: ObjectPooler.Instance.SpawnFromPool("tag", position, rotation)
+    // if you want to add so that the start is called every time it is created you can create an interface.
+    // just watch the video for the Brackeys 
 
     [System.Serializable]
     public class Pool
