@@ -6,7 +6,7 @@ public class Player_Movement : MonoBehaviour
 {
 
     public float gravity=1;
-    public float GravityTime=1;
+    public float GravityTime=1f;
     public float gravityScale=0.1f;
     public float jumpForce;
     public float speed = 1;
@@ -23,13 +23,12 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         rb2D = transform.GetComponent<Rigidbody2D>();
- 
+        StartCoroutine(changeGravity());
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        changeGravity();
+       
         #region Movement_Code
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
@@ -94,9 +93,11 @@ public class Player_Movement : MonoBehaviour
     
     IEnumerator changeGravity()
     {
-        yield return new WaitForSeconds(GravityTime);
-        gravity += gravityScale;
-        yield return null;
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(GravityTime);
+            gravity += gravityScale;
+            Debug.Log("Coroutine working");
+        }
     }
 }
