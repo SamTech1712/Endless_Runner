@@ -16,7 +16,7 @@ MonoBehaviour:
   BiomeName: City
   ground: {fileID: 4305327019806772754, guid: 71b88444467f3410991864996d157bbe, type: 3}
   groundPoolSize: 20
-  obstacle: {fileID: 2056599365512781894, guid: 10b010905f45d4f30a58aee04e0c3543,
+  obstacle: {fileID: 3049815569039404403, guid: e8bf04bcc61074d6c93a59235140d3b9,
     type: 3}
   obstaclePoolSize: 20
   scrap: {fileID: 1957373786851306097, guid: b301dd3e626fe054dbf101ba3a43a59e, type: 3}

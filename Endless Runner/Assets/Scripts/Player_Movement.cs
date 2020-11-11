@@ -13,6 +13,8 @@ public class Player_Movement : MonoBehaviour
     public float speed = 1;
     public float velocity = 0;
     public float airMovementSlowness;
+    public float groundAccelerationSlowness;
+    public float groundBreakSlowness;
     
     
     public Rigidbody2D rb2D;
@@ -42,18 +44,44 @@ public class Player_Movement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
-                velocity = -speed;
+                if (velocity > -speed)
+                {
+                    velocity -= speed / groundAccelerationSlowness;
+                }
+                else
+                {
+                    velocity = -speed;
+                }
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                velocity = speed;
+                if (velocity < speed)
+                {
+                    velocity += speed / groundAccelerationSlowness;
+                }
+                else
+                {
+                    velocity = speed;
+                }
             }
             else
             {
-                velocity = 0;
-            }
+                if (velocity < 0)
+                {
+                    velocity += speed / groundBreakSlowness;
+                }
+                else if (velocity > 0)
+                {
+                    velocity -= speed / groundBreakSlowness;
+                }
 
-        }else{
+                if(Mathf.Abs(velocity) < 1)
+                {
+                    velocity = 0;
+                }
+            }
+        }
+        else{
             if (Input.GetKey(KeyCode.D))
             {
                 if(velocity > -speed)
