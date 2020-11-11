@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player_Movement : MonoBehaviour
 {
     #region Variables here:-
-    public float gravity=1;
+    public static float gravity=1;
     public float GravityTime=1f;
     public float gravityScale=0.1f;
     public float jumpForce;

@@ -9,6 +9,7 @@ public class Collectibles : MonoBehaviour
         if(collision.tag == "collectibles")
         {
             Destroy(collision.gameObject);
+            Player_Movement.gravity += 0.5f;
         }
         
     }
