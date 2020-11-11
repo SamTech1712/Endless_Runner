@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Movement : MonoBehaviour
 {
-
+    #region Variables here:-
     public float gravity=1;
     public float GravityTime=1f;
     public float gravityScale=0.1f;
@@ -19,6 +20,7 @@ public class Player_Movement : MonoBehaviour
     public bool isGrounded;
     public bool isBlockedRight;
     public bool isBlockedLeft;
+    #endregion
 
     void Start()
     {
@@ -28,7 +30,6 @@ public class Player_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-       
         #region Movement_Code
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
@@ -95,9 +96,18 @@ public class Player_Movement : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(GravityTime);
-            gravity += gravityScale;
-            Debug.Log("Coroutine working");
+            if (gravity > 1.8)
+            {
+                yield return new WaitForSeconds(GravityTime);
+                gravity -= gravityScale;
+                //Debug.Log("Coroutine working");
+            }
+            
+            else if (gravity <= 1.8)
+            {
+                //change these else if statement for the restart of game
+                SceneManager.LoadScene("Endless Runner");
+            }
         }
     }
 }
