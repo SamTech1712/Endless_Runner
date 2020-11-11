@@ -27,6 +27,9 @@ public class MapCreator : MonoBehaviour
     public float minY;             //the lowest the platform can be
     public Vector2 playerStartPosition; // controls the position of the first platforms
     public float segmentLenght;
+    public float platformLenght;
+
+    public int chanceOfNotSpawningScrap;
     
     public float difficulty;       //used to determine the distance of jumps etc.
                                    //will be changed during the run
@@ -103,6 +106,11 @@ public class MapCreator : MonoBehaviour
 
         //Adds a single obstacle element. The element wont get a position until Spawn is calles on the segment it belongs to
         segment.elements.Add(new Obstacle(currentBiome.ObstacleName));
+
+        if(Random.Range(0, chanceOfNotSpawningScrap) == 0)
+        {
+            segment.elements.Add(new Scrap(currentBiome.ScrapName));
+        }
     }
 
     private void Update()
@@ -120,7 +128,7 @@ public class MapCreator : MonoBehaviour
             if(firstSegmentDistance > segmentLenght)
             {
                 SpawnNewSegment(segments[segments.Count - 1].Xpos + segmentLenght);
-                Debug.Log("hello");
+                
             }
         }
     }

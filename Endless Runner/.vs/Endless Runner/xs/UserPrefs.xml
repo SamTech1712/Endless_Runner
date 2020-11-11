@@ -1,10 +1,16 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BottomCollisionDetection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Procedural/ObjectPooler.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player_Movement.cs" Line="86" Column="26" />
-      <File FileName="Assets/Scripts/Procedural/Biome.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SideCollisionDetection.cs" Line="8" Column="44" />
-      <File FileName="Assets/Scripts/BottomCollisionDetection.cs" Line="7" Column="27" />
+      <File FileName="Assets/Scripts/Procedural/Biome.cs" Line="37" Column="6" />
+      <File FileName="Assets/Scripts/Procedural/DefaultBiomeNames.cs" Line="13" Column="35" />
+      <File FileName="Assets/Scripts/Collectibles.cs" Line="12" Column="50" />
+      <File FileName="Assets/Scripts/Procedural/Scrap.cs" Line="9" Column="26" />
+      <File FileName="Assets/Scripts/Procedural/ProceduralElement.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/Procedural/Obstacle.cs" Line="10" Column="6" />
+      <File FileName="Assets/Scripts/Procedural/MapCreator.cs" Line="109" Column="56" />
+      <File FileName="Assets/Scripts/Procedural/Segment.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player_Movement.cs" Line="111" Column="65" />
+      <File FileName="Assets/Scripts/Procedural/ObjectPooler.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,8 +18,9 @@
           <Node name="Endless Runner" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Procedural" expanded="True" />
-                <Node name="BottomCollisionDetection.cs" selected="True" />
+                <Node name="Procedural" expanded="True">
+                  <Node name="ObjectPooler.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -23,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7279beb4-ffb4-466e-a0be-8622d0d09af4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7d451017-3cff-4567-996d-979cf3c0ca1c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

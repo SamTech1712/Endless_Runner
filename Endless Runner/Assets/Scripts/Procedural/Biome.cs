@@ -11,13 +11,18 @@ public class Biome : ScriptableObject
 
     public GameObject ground;
     public int groundPoolSize;
+
     public GameObject obstacle;
     public int obstaclePoolSize;
+
+    public GameObject scrap;
+    public int scrapPoolSize;
 
     public void SetUpObjectPooler()
     {
         ObjectPooler.Instance.AddPool(GroundName, ground, groundPoolSize);
         ObjectPooler.Instance.AddPool(ObstacleName, obstacle, groundPoolSize);
+        ObjectPooler.Instance.AddPool(ScrapName, scrap, scrapPoolSize);
     }
 
     public string ObstacleName
@@ -33,6 +38,14 @@ public class Biome : ScriptableObject
         get
         {
             return BiomeName + defaultBiomeNames.obstacle;
+        }
+    }
+
+    public string ScrapName
+    {
+        get
+        {
+            return BiomeName + defaultBiomeNames.scrap;
         }
     }
 }

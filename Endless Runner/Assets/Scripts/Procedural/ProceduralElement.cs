@@ -15,8 +15,11 @@ public class ProceduralElement
 
     public void Move(float distance)
     {
-        element.transform.position = new Vector3(element.transform.position.x + distance, element.transform.position.y, 0);
-        position = element.transform.position;
+        if(element != null)
+        {
+            element.transform.position = new Vector3(element.transform.position.x + distance, element.transform.position.y, 0);
+            position = element.transform.position;
+        }
     }
 
     public virtual void CalculateAndSpawn(Segment segment)

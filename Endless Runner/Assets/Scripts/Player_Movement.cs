@@ -94,7 +94,8 @@ public class Player_Movement : MonoBehaviour
     
     IEnumerator changeGravity()
     {
-        while (true)
+        bool run = true;
+        while (run)
         {
             if (gravity > 1.8)
             {
@@ -106,7 +107,10 @@ public class Player_Movement : MonoBehaviour
             else if (gravity <= 1.8)
             {
                 //change these else if statement for the restart of game
-                SceneManager.LoadScene("Endless Runner");
+                //This crashed the game. You have to exit the coroutine.
+                //This part was called every time it went trough
+                //SceneManager.LoadScene("Endless Runner");
+                run = false;
             }
         }
     }

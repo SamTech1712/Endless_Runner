@@ -19,3 +19,5 @@ MonoBehaviour:
   obstacle: {fileID: 2056599365512781894, guid: 10b010905f45d4f30a58aee04e0c3543,
     type: 3}
   obstaclePoolSize: 20
+  scrap: {fileID: 1957373786851306097, guid: b301dd3e626fe054dbf101ba3a43a59e, type: 3}
+  scrapPoolSize: 10

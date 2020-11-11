@@ -10,4 +10,5 @@ public class DefaultBiomeNames : ScriptableObject
 {
     public string ground = "ground";
     public string obstacle = "obstacle";
+    public string scrap = "scrap";
 }

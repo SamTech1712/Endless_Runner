@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133274769}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: 0, z: 0}
+  m_LocalPosition: {x: -4, y: 4, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 700785181}
@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 259345442}
   - component: {fileID: 259345444}
   - component: {fileID: 259345443}
+  - component: {fileID: 259345445}
   m_Layer: 0
   m_Name: CollisionDetectionBottom
   m_TagString: Untagged
@@ -295,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259345441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.09, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 133274773}
@@ -338,8 +339,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.71, y: 0.1}
+  m_Size: {x: 0.98, y: 0.1}
   m_EdgeRadius: 0
+--- !u!114 &259345445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259345441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93120e38a4f38514d94b7a847018d999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613703726
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +364,7 @@ GameObject:
   - component: {fileID: 613703727}
   - component: {fileID: 613703729}
   - component: {fileID: 613703728}
+  - component: {fileID: 613703730}
   m_Layer: 0
   m_Name: CollisionDetectionRight
   m_TagString: Untagged
@@ -366,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613703726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0.08, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 133274773}
@@ -410,8 +424,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.26, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &613703730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613703726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93120e38a4f38514d94b7a847018d999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &700785178
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 700785181}
   - component: {fileID: 700785180}
-  - component: {fileID: 700785182}
   - component: {fileID: 700785179}
   m_Layer: 0
   m_Name: Main Camera
@@ -496,19 +521,6 @@ Transform:
   m_Father: {fileID: 133274773}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &700785182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700785178}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4cc718d1171e4ac18dfeae9f3076ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 133274773}
 --- !u!1 &1190047122
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,13 +553,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   biomes:
   - {fileID: 11400000, guid: b0d3c747a1dc243f79a9f9875a92b4ac, type: 2}
-  despawnX: -50
+  despawnX: -25
   spawnX: 50
   maxY: 50
   minY: -50
-  playerStartPosition: {x: 0, y: 0}
+  playerStartPosition: {x: -4, y: 0}
   segmentLenght: 10
-  difficulty: 5
+  platformLenght: 6
+  chanceOfNotSpawningScrap: 10
+  difficulty: 3
 --- !u!114 &1190047124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,6 +600,7 @@ GameObject:
   - component: {fileID: 2097308191}
   - component: {fileID: 2097308193}
   - component: {fileID: 2097308192}
+  - component: {fileID: 2097308194}
   m_Layer: 0
   m_Name: CollisionDetectionLeft
   m_TagString: Untagged
@@ -601,7 +616,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097308190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0, z: 0}
+  m_LocalPosition: {x: -0.08, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 133274773}
@@ -645,5 +660,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.8}
+  m_Size: {x: 0.26, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &2097308194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097308190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93120e38a4f38514d94b7a847018d999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
