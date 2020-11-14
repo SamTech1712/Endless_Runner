@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
-    
-    private void OnCollisionEnter2D(Collision2D collision)
+    public float gravityImpact;
+    public Player_Movement player;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.collider.tag == "collectibles")
+        if (collision.tag == "Player")
         {
-            collision.gameObject.SetActive(false);
+            player = collision.GetComponent<Player_Movement>();
+            player.AddGravity(gravityImpact);
+            gameObject.SetActive(false);
         }
     }
 }

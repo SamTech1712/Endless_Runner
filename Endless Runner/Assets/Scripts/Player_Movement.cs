@@ -18,6 +18,7 @@ public class Player_Movement : MonoBehaviour
     
     
     public Rigidbody2D rb2D;
+    public WeightBar weightBar;
 
     public bool isGrounded;
     public bool isBlockedRight;
@@ -44,7 +45,11 @@ public class Player_Movement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D))
             {
-                if (velocity > -speed)
+                if (velocity > 0)
+                {
+                    velocity -= speed / groundBreakSlowness;
+                }
+                else if (velocity > -speed)
                 {
                     velocity -= speed / groundAccelerationSlowness;
                 }
@@ -55,7 +60,11 @@ public class Player_Movement : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                if (velocity < speed)
+                if (velocity < 0)
+                {
+                    velocity += speed / groundBreakSlowness;
+                }
+                else if (velocity < speed)
                 {
                     velocity += speed / groundAccelerationSlowness;
                 }
@@ -119,25 +128,28 @@ public class Player_Movement : MonoBehaviour
         MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
+    public void AddGravity(float value)
+    {
+        gravity += value;
+        weightBar.SetSliderValue(gravity);
+    }
     
     IEnumerator changeGravity()
     {
         bool run = true;
         while (run)
         {
-            if (gravity > 1.8)
+            if (gravity > 0)
             {
                 yield return new WaitForSeconds(GravityTime);
                 gravity -= gravityScale;
-                //Debug.Log("Coroutine working");
+                weightBar.SetSliderValue(gravity);
             }
             
-            else if (gravity <= 1.8)
+            else if (gravity <= 0)
             {
-                //change these else if statement for the restart of game
-                //This crashed the game. You have to exit the coroutine.
-                //This part was called every time it went trough
-                //SceneManager.LoadScene("Endless Runner");
+
+                Debug.Log("Game over!");
                 run = false;
             }
         }
