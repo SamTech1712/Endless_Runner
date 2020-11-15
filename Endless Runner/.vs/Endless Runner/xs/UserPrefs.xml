@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WeightBar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerDustController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player_Movement.cs" Line="146" Column="41" />
-      <File FileName="Assets/Scripts/Collectibles.cs" Line="12" Column="54" />
-      <File FileName="Assets/Scripts/WeightBar.cs" Line="7" Column="10" />
+      <File FileName="Assets/Scripts/Player_Movement.cs" Line="99" Column="45" />
+      <File FileName="Assets/Scripts/Collectibles.cs" />
+      <File FileName="Assets/Scripts/WeightBar.cs" />
+      <File FileName="Assets/Scripts/PlayerGravity.cs" />
+      <File FileName="Assets/Scripts/BottomCollisionDetection.cs" />
+      <File FileName="Assets/Scripts/PlayerDustController.cs" Line="12" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +15,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Procedural" expanded="True" />
-                <Node name="WeightBar.cs" selected="True" />
+                <Node name="PlayerDustController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -22,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5e0a7715-96a7-4dad-a50b-95e7c762534a" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="44a5c54b-7e00-4555-9a68-c03b1d072ce6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

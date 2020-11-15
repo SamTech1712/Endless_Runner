@@ -5,12 +5,12 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour
 {
     public float gravityImpact;
-    public Player_Movement player;
+    public PlayerGravity player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            player = collision.GetComponent<Player_Movement>();
+            player = collision.GetComponent<PlayerGravity>();
             player.AddGravity(gravityImpact);
             gameObject.SetActive(false);
         }

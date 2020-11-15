@@ -11,6 +11,7 @@ public class BottomCollisionDetection : MonoBehaviour
         if (collision.collider.tag == "ground")
         {
             player_Movement.isGrounded = true;
+            player_Movement.CreateDust();
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

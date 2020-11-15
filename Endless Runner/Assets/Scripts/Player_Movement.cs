@@ -6,21 +6,24 @@ using UnityEngine.SceneManagement;
 public class Player_Movement : MonoBehaviour
 {
     #region Variables here:-
-    public static float gravity=1;
-    public float GravityTime=1f;
-    public float gravityScale=0.1f;
+
+    public ParticleSystem dust;
+
     public float jumpForce;
     public float speed = 1;
     public float velocity = 0;
-    public float airMovementSlowness;
+    public float jumpMovementSlowness;
+    public float fallMovementSlowness;
+    
     public float groundAccelerationSlowness;
     public float groundBreakSlowness;
     
     
     public Rigidbody2D rb2D;
-    public WeightBar weightBar;
+    
 
     public bool isGrounded;
+    public bool isInJump;
     public bool isBlockedRight;
     public bool isBlockedLeft;
     #endregion
@@ -28,18 +31,26 @@ public class Player_Movement : MonoBehaviour
     void Start()
     {
         rb2D = transform.GetComponent<Rigidbody2D>();
-        StartCoroutine(changeGravity());
+        
     }
 
     void FixedUpdate()
     {
         #region Movement_Code
+        if (isGrounded)
+        {
+            isInJump = false;
+        }
+
         if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
 
             rb2D.AddForce(new Vector2(0, 1) * jumpForce * 20f, ForceMode2D.Force);
+            isInJump = true;
 
         }
+
+        
 
         if (isGrounded)
         {
@@ -48,6 +59,7 @@ public class Player_Movement : MonoBehaviour
                 if (velocity > 0)
                 {
                     velocity -= speed / groundBreakSlowness;
+                    CreateDust();
                 }
                 else if (velocity > -speed)
                 {
@@ -84,7 +96,7 @@ public class Player_Movement : MonoBehaviour
                     velocity -= speed / groundBreakSlowness;
                 }
 
-                if(Mathf.Abs(velocity) < 1)
+                if(Mathf.Abs(velocity) < 0.5)
                 {
                     velocity = 0;
                 }
@@ -95,7 +107,7 @@ public class Player_Movement : MonoBehaviour
             {
                 if(velocity > -speed)
                 {
-                    velocity -= airMovementSlowness;
+                    velocity -= speed / jumpMovementSlowness;
                 }
                 else
                 {
@@ -106,13 +118,30 @@ public class Player_Movement : MonoBehaviour
             {
                 if(velocity < speed)
                 {
-                    velocity += airMovementSlowness;
+                    velocity += speed / jumpMovementSlowness;
                 } 
                 else
                 {
                     velocity = speed;
                 }
             }
+            else if(!isInJump)
+            {
+                if(velocity < 0)
+                {
+                    velocity += speed / fallMovementSlowness;
+                }
+                else if(velocity > 0)
+                {
+                    velocity -= speed / fallMovementSlowness;
+                }
+
+                if ( Mathf.Abs(velocity) < 1)
+                {
+                    velocity = 0;
+                }
+            }
+            
         }
 
         if(isBlockedRight && velocity < 0)
@@ -124,34 +153,14 @@ public class Player_Movement : MonoBehaviour
         }
 
         #endregion
-        rb2D.gravityScale = gravity;
+        
         MapCreator.instance.Move(velocity * Time.deltaTime);
     }
 
-    public void AddGravity(float value)
+    public void CreateDust()
     {
-        gravity += value;
-        weightBar.SetSliderValue(gravity);
+        dust.Play();
     }
-    
-    IEnumerator changeGravity()
-    {
-        bool run = true;
-        while (run)
-        {
-            if (gravity > 0)
-            {
-                yield return new WaitForSeconds(GravityTime);
-                gravity -= gravityScale;
-                weightBar.SetSliderValue(gravity);
-            }
-            
-            else if (gravity <= 0)
-            {
 
-                Debug.Log("Game over!");
-                run = false;
-            }
-        }
-    }
+    
 }
