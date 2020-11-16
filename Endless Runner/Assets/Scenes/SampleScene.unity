@@ -264,8 +264,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9a5611e9cf114458afdf4e1aa3aa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dust: {fileID: 0}
   jumpForce: 20
+  speed: 1
+  velocity: 0
+  jumpMovementSlowness: 0
+  fallMovementSlowness: 0
+  groundAccelerationSlowness: 0
+  groundBreakSlowness: 0
   rb2D: {fileID: 0}
+  isGrounded: 0
+  isInJump: 0
+  isBlockedRight: 0
+  isBlockedLeft: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
