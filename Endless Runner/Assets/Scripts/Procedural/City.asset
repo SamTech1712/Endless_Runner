@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultBiomeNames: {fileID: 11400000, guid: fb2ef8ed1bd7b4b0f8fa623d9ec63255, type: 2}
   BiomeName: City
-  ground: {fileID: 4305327019806772754, guid: 71b88444467f3410991864996d157bbe, type: 3}
+  ground: {fileID: 6102634074255363939, guid: 8194ad515c2ca4cb4953bc75299819b3, type: 3}
   groundPoolSize: 20
   obstacle: {fileID: 3049815569039404403, guid: e8bf04bcc61074d6c93a59235140d3b9,
     type: 3}
