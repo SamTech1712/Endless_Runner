@@ -36,7 +36,7 @@ public class BackGroundMovement : MonoBehaviour
         {
             if(transform.position.x < BackGroundManager.instance.spawnX && isRunningCheck)
             {
-                BackGroundManager.instance.setupNewBackground(transform.position.x + BackGroundManager.instance.backgroundWidth, 0, tag);
+                BackGroundManager.instance.setupNewBackground(transform.position.x + BackGroundManager.instance.backgroundWidth, tag);
                 isRunningCheck = false;
             }
             yield return new WaitForSeconds(waitTime);
