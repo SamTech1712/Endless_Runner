@@ -1,14 +1,11 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Procedural/MapCreator.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player_Movement.cs" Line="99" Column="45" />
-      <File FileName="Assets/Scripts/Collectibles.cs" />
-      <File FileName="Assets/Scripts/WeightBar.cs" />
-      <File FileName="Assets/Scripts/PlayerGravity.cs" />
-      <File FileName="Assets/Scripts/BottomCollisionDetection.cs" />
-      <File FileName="Assets/Scripts/PlayerDustController.cs" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="10" Column="50" />
-      <File FileName="Assets/Scripts/PauseMenu.cs" Line="7" Column="8" />
+      <File FileName="Assets/Scripts/Background/BackGroundManager.cs" Line="68" Column="50" />
+      <File FileName="Assets/Scripts/Player/Player_Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerReference.cs" Line="10" Column="34" />
+      <File FileName="Assets/Scripts/Background/BackGroundMovement.cs" Line="15" Column="41" />
+      <File FileName="Assets/Scripts/Procedural/MapCreator.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,20 +13,29 @@
           <Node name="Endless Runner" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Procedural" expanded="True" />
-                <Node name="PauseMenu.cs" selected="True" />
+                <Node name="Background" expanded="True" />
+                <Node name="Player" expanded="True" />
+                <Node name="Procedural" expanded="True">
+                  <Node name="MapCreator.cs" selected="True" />
+                </Node>
+                <Node name="UI" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cc2db753-c04b-4ad0-aa43-28a3d4b91f5f" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1968d484-cd82-4254-9f5f-9e4eb9c9c28c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Tallak/Documents/Repository fall up/Endless_Runner/Endless Runner/Assets/Scripts/Player/Player_Movement.cs" relfile="Assets/Scripts/Player/Player_Movement.cs" line="156" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
