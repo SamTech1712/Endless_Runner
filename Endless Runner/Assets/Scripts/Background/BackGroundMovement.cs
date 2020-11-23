@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackGroundMovement : MonoBehaviour
 {
     public GameObject player;
-    Player_Movement player_Movement;
+    NewPlayerMovement playerMovement;
     public float xMultiplier;
     public float yMultiplier;
     public float yOffset;
@@ -17,14 +17,14 @@ public class BackGroundMovement : MonoBehaviour
     void Start()
     {
         player = PlayerReference.player;
-        player_Movement = player.GetComponent<Player_Movement>();
+        playerMovement = player.GetComponent<NewPlayerMovement>();
         StartCoroutine(checkPosition());
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = transform.position.x + player_Movement.velocity * xMultiplier * Time.deltaTime;
+        float x = transform.position.x + playerMovement.velocity * xMultiplier * Time.deltaTime;
         float y = player.transform.position.y * yMultiplier + yOffset;
         transform.position = new Vector3(x, y, transform.position.y);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDustController : MonoBehaviour
 {
-    public Player_Movement player_Movement;
+    public NewPlayerMovement player_Movement;
     public ParticleSystem particle;
 
     public float particleSpeed;

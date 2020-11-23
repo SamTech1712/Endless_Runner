@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BottomCollisionDetection : MonoBehaviour
 {
-    public Player_Movement player_Movement;
+    public NewPlayerMovement player_Movement;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,6 +19,14 @@ public class BottomCollisionDetection : MonoBehaviour
         if (collision.collider.tag == "ground")
         {
             player_Movement.isGrounded = false;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "ground")
+        {
+            player_Movement.isGrounded = true;
         }
     }
 }

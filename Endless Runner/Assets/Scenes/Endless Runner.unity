@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 133274773}
   - component: {fileID: 133274772}
   - component: {fileID: 133274771}
-  - component: {fileID: 133274770}
+  - component: {fileID: 133274777}
   - component: {fileID: 133274775}
   - component: {fileID: 133274776}
   - component: {fileID: 133274774}
@@ -143,31 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &133274770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133274769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e9a5611e9cf114458afdf4e1aa3aa77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dust: {fileID: 379449008}
-  jumpForce: 10
-  speed: 6
-  velocity: 0
-  jumpMovementSlowness: 20
-  fallMovementSlowness: 10
-  groundAccelerationSlowness: 5
-  groundBreakSlowness: 3
-  rb2D: {fileID: 133274771}
-  isGrounded: 0
-  isInJump: 0
-  isBlockedRight: 0
-  isBlockedLeft: 0
 --- !u!50 &133274771
 Rigidbody2D:
   serializedVersion: 4
@@ -303,6 +278,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e1ed66568a44e769a0bfe0fd47e982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &133274777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133274769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34059e7d16e374ba1895993292b04233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dust: {fileID: 379449008}
+  jumpForce: 20
+  speed: 6
+  minVelocity: 0.1
+  airAcceleration: 0.5
+  airDrag: 1
+  groundAcceleration: 2
+  groundDrag: 1
+  isGrounded: 0
+  isBlockedLeft: 0
+  isBlockedRight: 0
 --- !u!1 &259345441
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f7368b7ed474822b84baace2ed4fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_Movement: {fileID: 133274770}
+  player_Movement: {fileID: 133274777}
 --- !u!61 &259345444
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5141,7 +5139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1834efb9ff233404c940785ab4128108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player_Movement: {fileID: 133274770}
+  player_Movement: {fileID: 133274777}
   particle: {fileID: 295022516}
   particleSpeed: 1.2
   relativeParticleCount: 0.5
@@ -10257,7 +10255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCheckingRight: 1
-  player_Movement: {fileID: 133274770}
+  player_Movement: {fileID: 133274777}
 --- !u!61 &613703729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12140,7 +12138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCheckingRight: 0
-  player_Movement: {fileID: 133274770}
+  player_Movement: {fileID: 133274777}
 --- !u!61 &2097308193
 BoxCollider2D:
   m_ObjectHideFlags: 0

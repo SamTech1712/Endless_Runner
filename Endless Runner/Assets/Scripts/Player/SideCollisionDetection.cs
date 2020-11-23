@@ -5,7 +5,7 @@ using UnityEngine;
 public class SideCollisionDetection : MonoBehaviour
 {
     public bool isCheckingRight;
-    public Player_Movement player_Movement;
+    public NewPlayerMovement player_Movement;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
