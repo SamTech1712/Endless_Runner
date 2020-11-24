@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 774a86d584eafc845b6d5f8cac34dcd8
+guid: 1a5fa5c36e6371e49a2d3c801136edb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5191842052228415205
-    second: Resume_Button_0
+      213: -1419970878905487431
+    second: Resume_button
+  - first:
+      213: -136713083590537952
+    second: Restart_Button
+  - first:
+      213: -1593887382638395662
+    second: Home_Button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -45,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -67,7 +73,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -79,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -91,7 +97,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Resume_Button_0
+      name: Resume_button
       rect:
         serializedVersion: 2
-        x: 12
-        y: 37
-        width: 40
-        height: 24
+        x: 30
+        y: 123
+        width: 62
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,8 +122,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b118dfa392fd2f7b0800000000000000
-      internalID: -5191842052228415205
+      spriteID: 9bf607b42004b4ce0800000000000000
+      internalID: -1419970878905487431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Restart_Button
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 69
+        width: 62
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d0070cc2c4a1ef0800000000000000
+      internalID: -136713083590537952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Home_Button
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 20
+        width: 62
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe7cd9cedf51e9e0800000000000000
+      internalID: -1593887382638395662
       vertices: []
       indices: 
       edges: []
