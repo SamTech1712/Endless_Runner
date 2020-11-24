@@ -52,18 +52,30 @@ public class NewPlayerMovement : MonoBehaviour
 
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
+        
         if (Input.GetKey(KeyCode.A))
+        {
             xInput = -1;
+        }
         else if (Input.GetKey(KeyCode.D))
+        {
             xInput = 1;
+        }
         else
+        {
             xInput = 0;
-        jumpInput = Input.GetKeyDown(KeyCode.Space);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpInput = true;
+        }
+        
     }
 
     private void JumpIfInput()
     {
+        
         if (isGrounded && jumpInput)
         {
             rb2D.AddForce(new Vector2(0, 1) * jumpForce * 20f, ForceMode2D.Force);
