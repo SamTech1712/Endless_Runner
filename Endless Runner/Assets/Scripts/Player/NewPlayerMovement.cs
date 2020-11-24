@@ -79,10 +79,11 @@ public class NewPlayerMovement : MonoBehaviour
         if (isGrounded && jumpInput)
         {
             rb2D.AddForce(new Vector2(0, 1) * jumpForce * 20f, ForceMode2D.Force);
-            jumpInput = false;
+            
             isInJump = true;
             StartCoroutine(ResetIsInJump());
         }
+        jumpInput = false;
     }
 
     private void Move()

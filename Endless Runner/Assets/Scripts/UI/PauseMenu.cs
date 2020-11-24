@@ -30,6 +30,7 @@ public class PauseMenu : MonoBehaviour
             Time.timeScale = 1f;
             gameIsPaused = false;
         }
+        
     }
 
     public void LoadMenu()
@@ -41,7 +42,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        PlayerReference.player.GetComponent<PlayerGravity>().gravityScale = 1;
+        PlayerReference.player.GetComponent<Rigidbody2D>().gravityScale = 1;
         SceneManager.LoadScene("Endless Runner");
     }
 }

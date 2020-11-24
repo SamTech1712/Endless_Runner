@@ -15,7 +15,7 @@ public class PlayerDustController : MonoBehaviour
         if (player_Movement.isGrounded)
         {
             var emmision = particle.emission;
-            emmision.enabled = true; ;
+            emmision.enabled = true;
 
             var velocity = particle.velocityOverLifetime;
             velocity.x = player_Movement.velocity * particleSpeed;
