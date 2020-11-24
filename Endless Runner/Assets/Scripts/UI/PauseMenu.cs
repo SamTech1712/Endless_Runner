@@ -41,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        PlayerReference.player.GetComponent<PlayerGravity>().gravityScale = 1;
         SceneManager.LoadScene("Endless Runner");
     }
 }

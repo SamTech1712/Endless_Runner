@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Background/BackGroundMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/PauseMenu.cs">
     <Files>
+      <File FileName="Assets/Scripts/UI/PauseMenu.cs" Line="44" Column="79" />
       <File FileName="Assets/Scripts/Background/BackGroundManager.cs" Line="7" Column="23" />
       <File FileName="Assets/Scripts/Player/Player_Movement.cs" Line="10" Column="5" />
       <File FileName="Assets/Scripts/Player/PlayerReference.cs" Line="10" Column="34" />
       <File FileName="Assets/Scripts/Background/BackGroundMovement.cs" Line="18" Column="1" />
-      <File FileName="Assets/Scripts/Procedural/MapCreator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player/BottomCollisionDetection.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Player/SideCollisionDetection.cs" Line="8" Column="29" />
-      <File FileName="Assets/Scripts/Player/NewPlayerMovement.cs" Line="51" Column="1" />
-      <File FileName="Assets/Scripts/Player/PlayerDustController.cs" Line="7" Column="29" />
-      <File FileName="Assets/Scripts/Player/PlayerGravity.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/Procedural/MapCreator.cs" />
+      <File FileName="Assets/Scripts/Player/BottomCollisionDetection.cs" />
+      <File FileName="Assets/Scripts/Player/SideCollisionDetection.cs" />
+      <File FileName="Assets/Scripts/Player/NewPlayerMovement.cs" Line="89" Column="15" />
+      <File FileName="Assets/Scripts/Player/PlayerDustController.cs" />
+      <File FileName="Assets/Scripts/Player/PlayerGravity.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,12 +19,12 @@
           <Node name="Endless Runner" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Background" expanded="True">
-                  <Node name="BackGroundMovement.cs" selected="True" />
-                </Node>
+                <Node name="Background" expanded="True" />
                 <Node name="Player" expanded="True" />
                 <Node name="Procedural" expanded="True" />
-                <Node name="UI" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="PauseMenu.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -33,11 +34,9 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6bcc2a6f-73b7-4562-a57d-a07d698d72ab" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0fcdca28-4353-44dd-ac0c-40b526b969d7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Tallak/Documents/Repository fall up/Endless_Runner/Endless Runner/Assets/Scripts/Player/NewPlayerMovement.cs" relfile="Assets/Scripts/Player/NewPlayerMovement.cs" line="87" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
