@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 1a5fa5c36e6371e49a2d3c801136edb7
+guid: c458107fe9d1fc342b751c2de5477b5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1419970878905487431
-    second: Resume_button
+      213: -2601901435321671472
+    second: Resume_Button
   - first:
-      213: -136713083590537952
+      213: 998606869682690826
     second: Restart_Button
   - first:
-      213: -1593887382638395662
+      213: -5621154777185842376
     second: Home_Button
   externalObjects: {}
   serializedVersion: 11
@@ -73,7 +73,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -85,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Resume_button
+      name: Resume_Button
       rect:
         serializedVersion: 2
         x: 30
@@ -122,8 +122,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bf607b42004b4ce0800000000000000
-      internalID: -1419970878905487431
+      spriteID: 0d0a2171e6034ebd0800000000000000
+      internalID: -2601901435321671472
       vertices: []
       indices: 
       edges: []
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02d0070cc2c4a1ef0800000000000000
-      internalID: -136713083590537952
+      spriteID: a0b93b938a3cbdd00800000000000000
+      internalID: 998606869682690826
       vertices: []
       indices: 
       edges: []
@@ -164,8 +164,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fe7cd9cedf51e9e0800000000000000
-      internalID: -1593887382638395662
+      spriteID: 83b09562385adf1b0800000000000000
+      internalID: -5621154777185842376
       vertices: []
       indices: 
       edges: []
