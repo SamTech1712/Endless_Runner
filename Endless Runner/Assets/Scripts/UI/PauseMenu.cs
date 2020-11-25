@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool gameIsPaused;
-
     public GameObject pauseMenuUI;
 
     public void PauseGame()
@@ -36,12 +35,16 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
+        //changed PlayerGravity.gravity to defualt 1
+        PlayerGravity.gravity = 1;
         SceneManager.LoadScene("MenuScene");
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        // i didn't knew was this the right way but I did this for now if you want.
+        PlayerGravity.gravity = 1;
         PlayerReference.player.GetComponent<Rigidbody2D>().gravityScale = 1;
         SceneManager.LoadScene("Endless Runner");
     }
