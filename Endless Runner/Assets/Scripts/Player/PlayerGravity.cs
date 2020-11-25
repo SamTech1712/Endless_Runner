@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerGravity : MonoBehaviour
 {
+    /* I changed this variable gravity from the PauseMenu script change 
+       it if it was not the correct way
+    */
     public static float gravity = 1;
     public float gravityTime = 1f;
     public float gravityScale = 0.1f;
