@@ -71,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3995362915177968535, guid: 5f505cd7587cc584aa06139300cce4bb,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -138,3 +138,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityImpact: 0.3
+  player: {fileID: 0}
