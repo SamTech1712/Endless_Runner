@@ -28,10 +28,12 @@ public class BackGroundManager : MonoBehaviour
             {
                 float x = despawnX + i * backgroundWidth;
                 GameObject background = setupNewBackground(x, tag);
-                if(i == numberOfBackgronds - 1)
+                if(i != numberOfBackgronds - 1)
                 {
-                    background.GetComponent<BackGroundMovement>().isFirstInRow = true;
+                    background.GetComponent<BackGroundMovement>().isFirstInRow = false;
+                    
                 }
+                
             }
         }
     }
@@ -46,7 +48,7 @@ public class BackGroundManager : MonoBehaviour
     {
         Vector3 position = new Vector3(xPos, 0, 0);
         GameObject background = ObjectPooler.Instance.SpawnFromPool(tag, position, Quaternion.identity);
-        
+        background.GetComponent<BackGroundMovement>().isFirstInRow = true;
         background.transform.position = position;
         return background;
     }

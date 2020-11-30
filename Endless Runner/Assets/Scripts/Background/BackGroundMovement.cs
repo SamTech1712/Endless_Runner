@@ -22,8 +22,9 @@ public class BackGroundMovement : MonoBehaviour
     {
         player = PlayerReference.player;
         playerMovement = player.GetComponent<NewPlayerMovement>();
-        StartCoroutine(checkPosition());
+        
     }
+
 
     private void OnEnable()
     {
@@ -31,7 +32,14 @@ public class BackGroundMovement : MonoBehaviour
         {
             isFirstInRow = true;
         }
-        firstTimeEnabling = false;
+        Debug.Log(isFirstInRow);
+        StartCoroutine(checkPosition());
+        
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     // Update is called once per frame
@@ -44,20 +52,22 @@ public class BackGroundMovement : MonoBehaviour
 
     IEnumerator checkPosition()
     {
-        
         while (isCheckingPosition)
         {
-            if(transform.position.x < BackGroundManager.instance.spawnX && isFirstInRow)
+            
+            yield return new WaitForSeconds(waitTime);
+            if (transform.position.x < BackGroundManager.instance.spawnX && isFirstInRow)
             {
                 BackGroundManager.instance.setupNewBackground(transform.position.x + BackGroundManager.instance.backgroundWidth, tag);
                 isFirstInRow = false;
-                Debug.Log("jepp");
+                
             }
-            yield return new WaitForSeconds(waitTime);
+            
 
             if(transform.position.x < BackGroundManager.instance.despawnX)
             {
                 BackGroundManager.instance.deleteBackgroundSegment(gameObject);
+                firstTimeEnabling = false;
             }
         }
     }

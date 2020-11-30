@@ -99,5 +99,7 @@ MonoBehaviour:
   yMultiplier: 0.5
   yOffset: -3
   isCheckingPosition: 1
-  waitTime: 0
+  waitTime: 1
   tag: city_1
+  isFirstInRow: 0
+  firstTimeEnabling: 1
