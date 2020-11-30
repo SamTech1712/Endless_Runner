@@ -20,15 +20,18 @@ public class BackGroundManager : MonoBehaviour
 
     void Start()
     {
-        
         int numberOfBackgronds = Mathf.RoundToInt((Mathf.Abs(despawnX) + Mathf.Abs(spawnX)) / backgroundWidth);
-        
+        Debug.Log(numberOfBackgronds);
         foreach(string tag in backgroundTags)
         {
-            for (int i = 0; i < numberOfBackgronds + 1; i++)
+            for (int i = 0; i < numberOfBackgronds; i++)
             {
                 float x = despawnX + i * backgroundWidth;
-                setupNewBackground(x, tag);
+                GameObject background = setupNewBackground(x, tag);
+                if(i == numberOfBackgronds - 1)
+                {
+                    background.GetComponent<BackGroundMovement>().isFirstInRow = true;
+                }
             }
         }
     }
@@ -39,12 +42,12 @@ public class BackGroundManager : MonoBehaviour
         background.SetActive(false);
     }
 
-    public void setupNewBackground(float xPos, string tag)
+    public GameObject setupNewBackground(float xPos, string tag)
     {
         Vector3 position = new Vector3(xPos, 0, 0);
         GameObject background = ObjectPooler.Instance.SpawnFromPool(tag, position, Quaternion.identity);
         
         background.transform.position = position;
-        
+        return background;
     }
 }

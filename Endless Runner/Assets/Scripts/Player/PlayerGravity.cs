@@ -46,8 +46,7 @@ public class PlayerGravity : MonoBehaviour
             }
             else if (gravity <= 0)
             {
-
-                Debug.Log("Game over!");
+                GameOverMenu.instance.GameOver();
                 run = false;
             }
         }

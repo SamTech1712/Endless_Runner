@@ -43,7 +43,7 @@ public class DangerousScrapManager : MonoBehaviour
 
             Vector3 position = new Vector3(Random.Range(minX, maxX),0, 0);
             Instantiate(dangerousScrap, position, Quaternion.identity);
-            Debug.Log("Instantiated");
+            
             
 
             if(intervalChange != 0)

@@ -12,7 +12,11 @@ public class BackGroundMovement : MonoBehaviour
     public bool isCheckingPosition;
     public float waitTime;
     public string tag;
-    bool isRunningCheck = true;
+    
+
+    public bool isFirstInRow = false;
+
+    public bool firstTimeEnabling = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,23 +25,33 @@ public class BackGroundMovement : MonoBehaviour
         StartCoroutine(checkPosition());
     }
 
+    private void OnEnable()
+    {
+        if (!firstTimeEnabling)
+        {
+            isFirstInRow = true;
+        }
+        firstTimeEnabling = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         float x = transform.position.x + playerMovement.velocity * xMultiplier * Time.deltaTime;
         float y = player.transform.position.y * yMultiplier + yOffset;
-        transform.position = new Vector3(x, y, transform.position.y);
+        transform.position = new Vector3(x, y, transform.position.z);
     }
 
     IEnumerator checkPosition()
     {
-        isRunningCheck = true;
+        
         while (isCheckingPosition)
         {
-            if(transform.position.x < BackGroundManager.instance.spawnX && isRunningCheck)
+            if(transform.position.x < BackGroundManager.instance.spawnX && isFirstInRow)
             {
                 BackGroundManager.instance.setupNewBackground(transform.position.x + BackGroundManager.instance.backgroundWidth, tag);
-                isRunningCheck = false;
+                isFirstInRow = false;
+                Debug.Log("jepp");
             }
             yield return new WaitForSeconds(waitTime);
 

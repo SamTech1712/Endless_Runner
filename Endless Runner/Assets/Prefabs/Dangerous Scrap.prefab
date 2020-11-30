@@ -291,6 +291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityChange: 0.02
   rb2D: {fileID: 4476870563612331341}
+  explosion: {fileID: 6661236440851314156, guid: 112ba74365d754c16bac4cb5614077f4,
+    type: 3}
 --- !u!1 &8165068327209514347
 GameObject:
   m_ObjectHideFlags: 0
