@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{6E0C5DCE-DDAC-CA2C-034F-45292D3E70AC}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Background/BackGroundManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerAnimation.cs">
     <Files>
-      <File FileName="Assets/Scripts/Background/BackGroundManager.cs" Line="34" Column="41" />
-      <File FileName="Assets/Scripts/Background/BackGroundMovement.cs" Line="57" Column="37" />
+      <File FileName="Assets/Scripts/Background/BackGroundManager.cs" Line="34" Column="21" />
+      <File FileName="Assets/Scripts/Background/BackGroundMovement.cs" />
+      <File FileName="Assets/Scripts/Player/PlayerAnimation.cs" Line="7" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,7 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a342017e-a06f-4eff-a0d9-b7160de594a2" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="14be9c66-2d27-4c3c-a0c3-ef214aed9944" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/Tallak/Documents/Repository fall up/Endless_Runner/Endless Runner/Assets/Scripts/Dangerous Scrap/DangerousScrap.cs" relfile="Assets/Scripts/Dangerous Scrap/DangerousScrap.cs" line="29" column="1" />
