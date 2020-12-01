@@ -34,6 +34,7 @@ public class GameOverMenu : MonoBehaviour
         Time.timeScale = 1f;
         // i didn't knew was this the right way but I did this for now if you want.
         PlayerGravity.gravity = 1;
+        GameOverMenuUI.SetActive(false);
         PlayerReference.player.GetComponent<Rigidbody2D>().gravityScale = 1;
         SceneManager.LoadScene("Endless Runner");
     }
