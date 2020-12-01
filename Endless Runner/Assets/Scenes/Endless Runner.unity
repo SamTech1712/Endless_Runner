@@ -10667,7 +10667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 78, y: -65}
+  m_AnchoredPosition: {x: 47.30005, y: -35.900024}
   m_SizeDelta: {x: 61.845825, y: 41.592422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &722086949
@@ -12578,6 +12578,7 @@ PrefabInstance:
     - target: {fileID: 3918113162497135795, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1,
         type: 3}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: -4.36
 =======
@@ -12587,10 +12588,14 @@ PrefabInstance:
       value: -4.36
 >>>>>>> ce01d6ba93a6a688ea6722130806d87f47072f3a
 >>>>>>> Stashed changes
+=======
+      value: -0.62
+>>>>>>> parent of ce01d6b... Scale waves
       objectReference: {fileID: 0}
     - target: {fileID: 3918113162497135795, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1,
         type: 3}
       propertyPath: m_LocalPosition.y
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       value: -2.37
 =======
@@ -12600,6 +12605,9 @@ PrefabInstance:
       value: -2.37
 >>>>>>> ce01d6ba93a6a688ea6722130806d87f47072f3a
 >>>>>>> Stashed changes
+=======
+      value: -0.566
+>>>>>>> parent of ce01d6b... Scale waves
       objectReference: {fileID: 0}
     - target: {fileID: 3918113162497135795, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1,
         type: 3}
@@ -12645,16 +12653,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3918113162497135795, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3918113162497135795, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ebe6ffc2fe3d9f4d86aba1617df15b1, type: 3}
